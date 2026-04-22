@@ -1,0 +1,20 @@
+# IDEs
+.vscode/
+.idea/
+
+# --- Frontend (contract-companion) ---
+contract-companion/node_modules/
+contract-companion/dist/
+contract-companion/build/
+contract-companion/.env*
+
+# --- Backend (backend) ---
+backend/__pycache__/
+backend/*.py[cod]
+backend/.venv/
+backend/venv/
+backend/.env
+
+# OS files
+.DS_Store
+Thumbs.db
