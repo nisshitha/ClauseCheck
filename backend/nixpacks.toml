@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["gcc", "mupdf"]
+
+[phases.install]
+cmds = ["pip install -r backend/requirements.txt"]
+
+[phases.start]
+cmd = "cd backend && gunicorn -k uvicorn.workers.UvicornWorker main:app"
