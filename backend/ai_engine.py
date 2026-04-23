@@ -1,22 +1,19 @@
 import os
-import json  # <--- CRITICAL FIX: Add this import
+import json
 from groq import Groq
 
-# Get the key
-api_key = os.environ.get("GROQ_API_KEY")
-
-# Safety check
-if not api_key:
-    print("WARNING: GROQ_API_KEY is not set in environment variables!")
-
-client = Groq(api_key=api_key) if api_key else None
 
 def audit_contract_with_ai(contract_text: str) -> dict:
-    """Sends text to Groq and returns a highly structured JSON audit."""
-    
-    # 1. Safety check if client failed to initialize
-    if client is None:
-        return {"error": "AI client not initialized. Check GROQ_API_KEY environment variable."}
+    """Sends text to Groq and returns a structured JSON audit."""
+
+    # ✅ Get API key
+    api_key = os.environ.get("GROQ_API_KEY")
+
+    if not api_key:
+        return {"error": "API key not found"}
+
+    # ✅ Initialize client INSIDE function
+    client = Groq(api_key=api_key)
 
     system_prompt = """
     You are an expert tech-industry contract lawyer. Analyze the provided contract text.
@@ -39,20 +36,20 @@ def audit_contract_with_ai(contract_text: str) -> dict:
       ]
     }
     """
-    
+
     try:
         response = client.chat.completions.create(
-            model="llama-3.1-8b-instant", 
+            model="llama-3.1-8b-instant",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"Analyze this contract:\n\n{contract_text}"}
             ],
             temperature=0.1,
-            response_format={"type": "json_object"} 
+            response_format={"type": "json_object"}
         )
-        
-        # Parse the JSON string into a Python Dictionary
+
         return json.loads(response.choices[0].message.content)
+
     except Exception as e:
         print(f"AI Engine Error: {e}")
         return {"error": str(e)}
