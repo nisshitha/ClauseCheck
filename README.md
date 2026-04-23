@@ -50,7 +50,8 @@ The project utilizes a decoupled, modern full-stack architecture:
 git clone https://github.com/nisshitha/ClauseCheck.git
 
 cd ClauseCheck
-3. Backend Setup (FastAPI) ->
+
+2. Backend Setup (FastAPI) ->
 * Navigate to the backend folder: cd backend
 * Create a virtual environment: python -m venv .venv
 * Activate the environment:
