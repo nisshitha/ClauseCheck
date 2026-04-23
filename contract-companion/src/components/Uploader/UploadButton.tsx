@@ -38,7 +38,9 @@ export const UploadButton = ({ onUploadStart, onUploadComplete }: UploadButtonPr
       console.log("Sending PDF to FastAPI backend...");
       
       // 3. Send it to your Python server
-      const response = await fetch("http://127.0.0.1:8000/api/audit", {
+      const API_URL = import.meta.env.VITE_API_URL;
+
+      const response = await fetch(`${API_URL}/api/audit`,  {
         method: "POST",
         body: formData,
       });
