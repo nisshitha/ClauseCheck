@@ -2,7 +2,8 @@
 Stop signing contracts you don't understand. ClauseCheck is a high-speed, AI-driven auditor that turns 50-page legal documents into an actionable insights instantly flagging predatory IP clauses, uncapped liabilities, and hidden risks so you can sign and approve with total confidence.
 
 **Live Demo:** [clause-check-six.vercel.app](https://clause-check-six.vercel.app)
-( you can test with two demo files which are inside the test-docs folder )
+
+( you can test with two demo files PDF documents which are inside the test-docs folder )
 
 ## Tech Stack
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
