@@ -2,6 +2,7 @@
 Stop signing contracts you don't understand. ClauseCheck is a high-speed, AI-driven auditor that turns 50-page legal documents into an actionable insights instantly flagging predatory IP clauses, uncapped liabilities, and hidden risks so you can sign and approve with total confidence.
 
 **Live Demo:** [clause-check-six.vercel.app](https://clause-check-six.vercel.app)
+( you can test with two demo files which are inside the test-docs folder )
 
 ## Tech Stack
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -12,7 +13,7 @@ Stop signing contracts you don't understand. ClauseCheck is a high-speed, AI-dri
 ### The Problem: 
 Tech freelancers who are engineering students and small startups often face "Legal Paralysis"—signing NDAs and Service Agreements from their huge vendors without knowing if they are giving away their IP or accepting unfair liability.
 ### The Solution: 
-ClauseCheck uses LLM-based Legal Engineering to audit documents instantly. It identifies "Red Flag" clauses, suggests industry-standard alternatives, a negotiation checklist recommendation to clarify with their clients and provides a "Legal Health Score" for the overall document.
+ClauseCheck uses LLM-based Legal Engineering to audit service agreements and NDA documents instantly. It identifies "Red Flag" clauses, suggests industry-standard alternatives, a negotiation checklist recommendation to clarify with their clients and provides a "Legal Health Score" for the overall document.
 
 ## Key Features
 * Instant Risk Scoring: A 0-100 "Health Score" based on document safety.
